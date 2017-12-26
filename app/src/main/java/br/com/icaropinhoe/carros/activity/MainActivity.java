@@ -5,7 +5,7 @@ import android.os.Bundle;
 
 import br.com.icaropinhoe.carros.R;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
