@@ -4,10 +4,13 @@
     android:layout_height="match_parent"
     tools:context="br.com.icaropinhoe.carros.fragment.CarrosFragment">
 
-    <TextView
-        android:id="@+id/text"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Carros" />
+        android:layout_height="wrap_content"
+        android:cacheColorHint="@android:color/transparent"
+        android:clipToPadding="false"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollbars="vertical"/>
 
 </FrameLayout>
