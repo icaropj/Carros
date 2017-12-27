@@ -51,6 +51,9 @@ Versao %s<br><br>
     <string name="sobre">Sobre</string>
     <string name="site_do_livro">Site do Livro</string>
 
+    <!-- T -->
+    <string name="todos">Todos</string>
+
     <!-- V -->
     <string name="vazio" />
     <string name="video">Vídeo</string>

@@ -22,16 +22,6 @@ public class BaseActivity extends livroandroid.lib.activity.BaseActivity {
 
     protected DrawerLayout mDrawerLayout;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        setUpToolbar();
-        setUpNavDrawer();
-        replaceFragment(new CarrosFragment());
-    }
-
     protected void setUpToolbar(){
         Toolbar toolbar = findViewById(R.id.toolbar);
         if(toolbar != null){
@@ -61,16 +51,16 @@ public class BaseActivity extends livroandroid.lib.activity.BaseActivity {
     private void onNavDrawerItemSelected(MenuItem item) {
         switch(item.getItemId()){
             case R.id.nav_item_carros_todos:
-                replaceFragment(new CarrosFragment());
+                replaceFragment(CarrosFragment.newInstance(R.string.todos));
                 break;
             case R.id.nav_item_carros_classicos:
-                replaceFragment(new CarrosFragment());
+                replaceFragment(CarrosFragment.newInstance(R.string.classicos));
                 break;
             case R.id.nav_item_carros_esportivos:
-                replaceFragment(new CarrosFragment());
+                replaceFragment(CarrosFragment.newInstance(R.string.esportivos));
                 break;
             case R.id.nav_item_carros_luxo:
-                replaceFragment(new CarrosFragment());
+                replaceFragment(CarrosFragment.newInstance(R.string.luxo));
                 break;
             case R.id.nav_item_site_livro:
                 replaceFragment(new SiteLivroFragment());
@@ -80,7 +70,7 @@ public class BaseActivity extends livroandroid.lib.activity.BaseActivity {
         }
     }
 
-    private void replaceFragment(Fragment fragment) {
+    protected void replaceFragment(Fragment fragment) {
         getSupportFragmentManager()
                 .beginTransaction()
                 .replace(R.id.container, fragment, "TAG")
