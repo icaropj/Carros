@@ -12,6 +12,7 @@ import android.view.MenuItem;
 
 import br.com.icaropinhoe.carros.R;
 import br.com.icaropinhoe.carros.fragment.CarrosFragment;
+import br.com.icaropinhoe.carros.fragment.CarrosTabFragment;
 import br.com.icaropinhoe.carros.fragment.SiteLivroFragment;
 
 /**
@@ -51,7 +52,7 @@ public class BaseActivity extends livroandroid.lib.activity.BaseActivity {
     private void onNavDrawerItemSelected(MenuItem item) {
         switch(item.getItemId()){
             case R.id.nav_item_carros_todos:
-                replaceFragment(CarrosFragment.newInstance(R.string.todos));
+                replaceFragment(new CarrosTabFragment());
                 break;
             case R.id.nav_item_carros_classicos:
                 replaceFragment(CarrosFragment.newInstance(R.string.classicos));

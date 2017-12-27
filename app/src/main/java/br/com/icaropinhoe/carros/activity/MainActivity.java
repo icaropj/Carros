@@ -8,6 +8,7 @@ import android.view.MenuItem;
 import br.com.icaropinhoe.carros.R;
 import br.com.icaropinhoe.carros.fragment.AboutDialog;
 import br.com.icaropinhoe.carros.fragment.CarrosFragment;
+import br.com.icaropinhoe.carros.fragment.CarrosTabFragment;
 
 public class MainActivity extends BaseActivity {
 
@@ -18,7 +19,7 @@ public class MainActivity extends BaseActivity {
 
         setUpToolbar();
         setUpNavDrawer();
-        replaceFragment(CarrosFragment.newInstance(R.string.todos));
+        replaceFragment(new CarrosTabFragment());
     }
 
     @Override
